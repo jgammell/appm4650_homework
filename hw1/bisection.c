@@ -1,10 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include <math.h>
-
-#define A_INIT 1.0
-#define B_INIT 2.0
-#define N_ITER 10
+#include <string.h>
 
 float f(float x) // The function for which to find a root.
 {
@@ -32,20 +29,29 @@ void iterate_bisection(float (*f)(float), float *a, float *b)
 }
 
 int main()
-{	
-	float a = A_INIT;
-	float b = B_INIT;
+{
+	FILE * F = fopen("/home/appm4650_homework/hw1/bisection_output.txt", "a");
+	
+	float a = 1.0; // initial interval
+	float b = 2.0;
 
-	for(int i=0; i<N_ITER; i+=1)
+	for(int i=0; i<10; i+=1) // run 10 iterations of algorithm
 	{
 		iterate_bisection(&f, &a, &b);
-		printf("Iteration %d: answer is in (%f, %f).\n", i+1, a, b);
+		char output[50];
+		sprintf(output, "Iteration %d: answer is in (%f, %f).\n", i+1, a, b);
+		fputs(output, F);
 	}
-
-	printf("Final approximation: %f.\n", .5*(a + b));
-	printf("Actual answer: %f.\n", sqrt(2));
-	printf("Absolute error: %f.\n", fabs(sqrt(2) - .5*(a + b)));
-	printf("Relative error: %f.\n", fabs(sqrt(2) - .5*(a + b))/sqrt(2));
-
+	
+	char output[50];
+	sprintf(output, "Final approximation: %f.\n", .5*(a + b));
+	fputs(output, F);
+	sprintf(output, "Actual answer: %f.\n", sqrt(2));
+	fputs(output, F);
+	sprintf(output, "Absolute error: %f.\n", fabs(sqrt(2) - .5*(a + b)));
+	fputs(output, F);
+	sprintf(output, "Relative error: %f.\n", fabs(sqrt(2) - .5*(a + b))/sqrt(2));
+	fputs(output, F);
+	
 	return 0;
 }

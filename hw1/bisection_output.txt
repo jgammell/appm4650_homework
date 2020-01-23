@@ -1,0 +1,14 @@
+Iteration 1: answer is in (1.000000, 1.500000).
+Iteration 2: answer is in (1.250000, 1.500000).
+Iteration 3: answer is in (1.375000, 1.500000).
+Iteration 4: answer is in (1.375000, 1.437500).
+Iteration 5: answer is in (1.406250, 1.437500).
+Iteration 6: answer is in (1.406250, 1.421875).
+Iteration 7: answer is in (1.414062, 1.421875).
+Iteration 8: answer is in (1.414062, 1.417969).
+Iteration 9: answer is in (1.414062, 1.416016).
+Iteration 10: answer is in (1.414062, 1.415039).
+Final approximation: 1.414551.
+Actual answer: 1.414214.
+Absolute error: 0.000337.
+Relative error: 0.000238.
