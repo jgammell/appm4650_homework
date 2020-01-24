@@ -1,0 +1,6 @@
+Calculated maximum-magnitude float: 3.402086e+38.
+Actual maximum-magnitude float: 3.402823e+38.
+Computed minimum-magnitude floating-point number: 1.401298e-45.
+Actual minimum-magnitude floating-point number: 1.401298e-45.
+Computed machine epsilon: 1.192093e-07.
+Actual machine epsilon: 1.192093e-07.
